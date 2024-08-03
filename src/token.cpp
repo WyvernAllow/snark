@@ -1,0 +1,100 @@
+#include "token.hpp"
+#include <string>
+
+namespace sk {
+	std::string token_type_to_string(token_type type) {
+		switch (type)
+		{
+		case sk::LBRACE:
+			return "LBRACE";
+		case sk::RBRACE:
+			return "RBRACE";
+		case sk::RBRACKET:
+			return "RBRACKET";
+		case sk::LBRACKET:
+			return "LBRACKET";
+		case sk::LPAREN:
+			return "LPAREN";
+		case sk::RPAREN:
+			return "RPAREN";
+		case sk::COLON:
+			return "COLON";
+		case sk::SEMICOLON:
+			return "SEMICOLON";
+		case sk::COMMA:
+			return "COMMA";
+		case sk::PLUS:
+			return "PLUS";
+		case sk::MINUS:
+			return "MINUS";
+		case sk::STAR:
+			return "STAR";
+		case sk::SLASH:
+			return "SLASH";
+		case sk::BANG:
+			return "BANG";
+		case sk::BANG_EQUAL:
+			return "BANG_EQUAL";
+		case sk::EQUAL:
+			return "EQUAL";
+		case sk::EQUAL_EQUAL:
+			return "EQUAL_EQUAL";
+		case sk::LESS:
+			return "LESS";
+		case sk::LESS_EQUAL:
+			return "LESS_EQUAL";
+		case sk::GREATER:
+			return "GREATER";
+		case sk::GREATER_EQUAL:
+			return "GREATER_EQUAL";
+		case sk::DOT:
+			return "DOT";
+		case sk::INCLUSIVE_RANGE:
+			return "INCLUSIVE_RANGE";
+		case sk::EXCLUSIVE_RANGE:
+			return "EXCLUSIVE_RANGE";
+		case sk::IDENTIFIER:
+			return "IDENTIFIER";
+		case sk::STRING:
+			return "STRING";
+		case sk::NUMBER:
+			return "NUMBER";
+		case sk::AND:
+			return "AND";
+		case sk::OR:
+			return "OR";
+		case sk::FN:
+			return "FN";
+		case sk::IF:
+			return "IF";
+		case sk::ELSE:
+			return "ELSE";
+		case sk::ELIF:
+			return "ELIF";
+		case sk::RETURN:
+			return "RETURN";
+		case sk::LET:
+			return "LET";
+		case sk::WHILE:
+			return "WHILE";
+		case sk::FOR:
+			return "FOR";
+		case sk::IN:
+			return "IN";
+		case sk::TRUE:
+			return "TRUE";
+		case sk::FALSE:
+			return "FALSE";
+		case sk::NONE:
+			return "NONE";
+		case sk::ERROR_UNEXPECTED_CHARACTER:
+			return "ERROR_UNEXPECTED_CHARACTER";
+		case sk::ERROR_UNTERMINATED_STRING:
+			return "ERROR_UNTERMINATED_STRING";
+		case sk::END_OF_FILE:
+			return "END_OF_FILE";
+		default:
+			return "UNKNOWN";
+		}
+	}
+}
